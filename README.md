@@ -4,26 +4,28 @@
 Summary;
 
 Hardware:
- - Dual MC33926 Motor Driver Carrier; 
+ - 3 Dual MC33926 Motor Driver Carrier; 
    - link: https://www.pololu.com/product/1213
+   - Motor shield pins (functions and their pins requirements);
+    * nD2 (digital); tristate disables both outputs of both motor channels when LOW; toggling resets latched driver fault condition
+    * M1DIR and M2DIR (digital); motor 1 and motor 2 direction input
+    * M1PWM and M2PWM (digital PWM); motor 1 and motor 2 speed
+    * M1FB and M2FB (analog); motor 1 and motor 2 current sense output, approc 525mV/A
+    * nSF (digital); status flag indicator
 =======
 # Summary
-This file acts as the backup program for RASMv2
+This file acts as the backup program for RASMv2 main control program
 
 # Hardware
 -3 Dual MC33926 Motor Driver Carrier (motor shield);
  - link: https://www.pololu.com/product/1213
 - Arduino Mega 2560 R3
-- Motors; [need to add later]
+- 6 Motors; [need to add later]
 
 # Arduino Library
-- DualMC33926Motor3Shield
-  * only default pins, current version does not allow for pin mapping. (except by changing the pins in .cpp file)
-  * setM#Speed(int speed); - to set speed for motor #
-  * getM#CurrentMilliamps(); - read current reading from Motor #
-  ** this library does not have brake function (setM#Brake) like in DualVN5019MotorShield Library
- 
-- Encoder
+* DualMC33926Motor3Shield; 
+ - supports 3 DualMC33926 motor shields, if needs to change any motor driver-arduino pins, change it in the .cpp file.
+  
   
   ## Example Program
 ---------------
