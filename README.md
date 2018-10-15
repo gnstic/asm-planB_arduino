@@ -27,4 +27,9 @@ This file acts as the backup program for RASMv2
   ## Example Program
 ---------------
 # 1. Demo.
->>>>>>> 04b6d2d4a3612c058cccac8fec291ed6cac644a1
+ Demo 1.
+ * For testing the custom motor library "DualMC33926Motor3Shield" and check if the library works as intended
+ 
+ Demo 2.
+ * Testing the motors and encoder reading value. 
+ * library: Encoder.h && DualMC33926Motor3Shield
