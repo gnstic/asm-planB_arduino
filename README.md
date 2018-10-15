@@ -18,10 +18,10 @@ This file acts as the backup program for RASMv2
 
 # Arduino Library
 - DualMC33926Motor3Shield
- * only default pins, current version does not allow for pin mapping. (except by changing the pins in .cpp file)
- * setM#Speed(int speed); - to set speed for motor #
- * getM#CurrentMilliamps(); - read current reading from Motor #
- ** this library does not have brake function (setM#Brake) like in DualVN5019MotorShield Library
+  * only default pins, current version does not allow for pin mapping. (except by changing the pins in .cpp file)
+  * setM#Speed(int speed); - to set speed for motor #
+  * getM#CurrentMilliamps(); - read current reading from Motor #
+  ** this library does not have brake function (setM#Brake) like in DualVN5019MotorShield Library
  
 - Encoder
   
