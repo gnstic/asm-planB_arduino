@@ -23,18 +23,20 @@ This file acts as the backup program for RASMv2 main control program
   * other choices: low pass filter if necessary
   
 ## Encoders;
-   * Encoders from: 
+   * Encoders from: [link] 
    * Encoders pins (connected to digital pins arduino, reccommended interrupt pins 2,3,18,19,20,21);
     - encoder motor 1: pins 2,3
     - encoder motor 2: pins 18,19
     - encoder motor 3: pins 20,21
     - encoder motor 4: pins D#, D# 
     - encoder motor 5: pins D#, D#
+   * refs: http://playground.arduino.cc/code/interrupts
     
 # Arduino Library
 * DualMC33926Motor3Shield; 
  - supports 3 DualMC33926 motor shields, if needs to change any motor driver-arduino pins, change it in the .cpp file.
-  
+* Encoder.h
+* signal_processing.hpp (link: https://github.com/ASM-Advised-Projects/rasm-v2/blob/master/include/control/signal_processing.hpp - Joe's)
   
   # Example Program
 ---------------
