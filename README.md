@@ -36,3 +36,6 @@ This file acts as the backup program for RASMv2 main control program
  Demo 2.
  * Testing the motors and encoder reading value. 
  * library: Encoder.h && DualMC33926Motor3Shield
+
+ Demo 3.
+ * Refine encoder reading values by using filters- software and electronics(if necessary)
