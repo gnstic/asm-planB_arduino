@@ -17,12 +17,13 @@ This file acts as the backup program for RASMv2
 - Motors; [need to add later]
 
 # Arduino Library
-- for the time being, still study the DualVNH5019MotorShieldMod3, a custom arduino library created by https://github.com/photodude/DualVNH5019MotorShieldMod3 , but library is for Dual VNH5019 Motor Shield. Still study if the library can be used on other type of motor shield.
-- Using the Arduino IDE;
-  - In the Arduino IDE, open the "Sketch" menu, select "Include Library", then "Manage Libraries...".
-  - Search for "DualVNH5019MotorShieldMod3".
-  - Click the DualVNH5019MotorShieldMod3 entry in the list.
-  - Click "Install"
+- DualMC33926Motor3Shield
+ * only default pins, current version does not allow for pin mapping. (except by changing the pins in .cpp file)
+ * setM#Speed(int speed); - to set speed for motor #
+ * getM#CurrentMilliamps(); - read current reading from Motor #
+ ** this library does not have brake function (setM#Brake) like in DualVN5019MotorShield Library
+ 
+- Encoder
   
   ## Example Program
 ---------------
