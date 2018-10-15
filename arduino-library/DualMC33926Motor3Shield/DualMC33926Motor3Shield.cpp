@@ -1,7 +1,9 @@
 /* This is the motor shield library that will be used on RASM. The library is for Pololu Dual MC 33926 motor shield. The RASM will use 3 motor shields, that will connect to 5 DC motors*/
 
 // include DualMC33926 header file
+//#include "Arduino.h"
 #include "DualMC33926Motor3Shield.h"
+
 
 // Constructors ////////////////////////////////////////////////////////////////
 
@@ -15,9 +17,13 @@ DualMC33926Motor3Shield::DualMC33926Motor3Shield()
   _M2DIR = 8;	// motor 2 direction
   _M2PWM = 10;	// motor 2 speed (digital PWM)	
   _nSF = 12;	// status flag indicator (LOW indicates fault)
-  _M1FB = A0;	//analog 0; motor 1 current sense output (525mV/A)
-  _M2FB = A1;	// analog 1; motor 2 current sense output (525mV/A)
-  
+  _M1FB =A0;	//analog 0; motor 1 current sense output (525mV/A)
+  _M2FB =A1;	// analog 1; motor 2 current sense output (525mV/A)
+  _M3FB =A8;	//analog 8; motor 3 current 
+  _M4FB =A9;	//analog 9; motor 4 current
+  _M5FB =A11;	//analog 11; motor 3 current 
+  _M6FB =A10;	//analog 10; motor 4 current
+
   // Default Pin Map for motor shield 2;  the 
   _nD22 = 26;	// ND pin for motor shield 2[unsure]
   _M3DIR = 25;	// motor 3 direction	
@@ -25,8 +31,8 @@ DualMC33926Motor3Shield::DualMC33926Motor3Shield()
   _M4DIR = 24;	// motor 4 direction
   _M4PWM = 6;	// motor 4 speed (digital PWM)
   _nSF2 = 22;	//Status Flag for motor shield 2 [unsure]
-  _M3FB = A8;	//analog 0; motor 3 current 
-  _M4FB = A9;	//analog 1; motor 4 current
+ // _M3FB = A8;	//analog 8; motor 3 current 
+ // _M4FB = A9;	//analog 9; motor 4 current
   
   // Default Pin Map for motor shield 3 [will udpate later]
   _nD23 = 46;	// ND pin for motor shield 2[unsure]
@@ -35,12 +41,9 @@ DualMC33926Motor3Shield::DualMC33926Motor3Shield()
   _M6DIR = 48;	// motor 4 direction
   _M6PWM = 3;	// motor 4 speed (digital PWM)
   _nSF3 = 49;	//Status Flag for motor shield 2 [unsure]
-  _M5FB = A11;	//analog 0; motor 3 current 
-  _M6FB = A10;	//analog 1; motor 4 current
+  //_M5FB = A11;	//analog 11; motor 3 current 
+  //_M6FB = A10;	//analog 10; motor 4 current
 }
-
-
-
 
 // Public Methods //////////////////////////////////////////////////////////////
 void DualMC33926Motor3Shield::init()
@@ -92,11 +95,10 @@ void DualMC33926Motor3Shield::init()
       TCCR1B = 0b00010001;
       ICR1 = 400;
     }
-  #endif
+#endif
 } // end of public methods
 
 /***** Setting up the speed for each motors *****/
-
 // Set speed for motor 1, speed is a number betwenn -400 and 400
 void DualMC33926Motor3Shield::setM1Speed(int speed)
 {
@@ -380,7 +382,7 @@ unsigned int DualMC33926Motor3Shield::getM6CurrentMilliamps()
 	// 5V / 1024 ADC counts / 525 mV per A = 9 mA per count
 	return analogRead(_M6FB) * 9;
 }
-// ******* END OF SETTING SPEEDS ******* //
+// ******* END OF READING CURRENT VALUES ******* //
 
 // ******* RETURN ERROR STATUS ******* //
 unsigned char DualMC33926Motor3Shield::getFault()
