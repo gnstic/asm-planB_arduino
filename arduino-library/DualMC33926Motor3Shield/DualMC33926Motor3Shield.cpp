@@ -19,6 +19,7 @@ DualMC33926Motor3Shield::DualMC33926Motor3Shield()
   _nSF = 12;	// status flag indicator (LOW indicates fault)
   _M1FB =A0;	//analog 0; motor 1 current sense output (525mV/A)
   _M2FB =A1;	// analog 1; motor 2 current sense output (525mV/A)
+  
   _M3FB =A8;	//analog 8; motor 3 current 
   _M4FB =A9;	//analog 9; motor 4 current
   _M5FB =A11;	//analog 11; motor 3 current 
