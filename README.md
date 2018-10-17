@@ -9,11 +9,22 @@ This file acts as the backup program for RASMv2 main control program
  - link: https://www.pololu.com/product/1213
  - Arduino Mega 2560 R3
   - Motor shield pins (functions and their pins requirements);
-  * nD2 (digital); tristate disables both outputs of both motor channels when LOW; toggling resets latched driver fault condition
-  * M1DIR and M2DIR (digital); motor 1 and motor 2 direction input
-  * M1PWM and M2PWM (digital PWM); motor 1 and motor 2 speed
-  * M1FB and M2FB (analog); motor 1 and motor 2 current sense output, approc 525mV/A
-  * nSF (digital); status flag indicator
+    * VIN --- this is the main 5-28V power supply connection
+    * GND ---ground connection for logic and motor power supplies
+    * OUT2 --- the motor output pin controlled by IN2
+    * OUT1 --- the motor output pin controlled by IN1
+    * IN2 --- the logic control of OUT2
+    * IN1 --- the logic control of OUT1
+    * D1 --- when D1 is high, OUT1 and OUT2 are set to high impedance.
+    * SF --- monitor motor driver errors
+   - for more information, visit: https://www.pololu.com/product/1212
+  - Application connections; only five I/O that will be used on RASM: IN2, IN1, D1, SF and FB
+    * IN1 --- digital pin
+    * IN2 --- digital pin
+    * D1 --- PWM pin
+    * SF --- 
+    * FB ---
+    * EN --- the default state is LOW, has to set this to HIGH to allow the motor driver chip to run.
 
 ## Motor Selection
 - 5 Motors; [need to add later] and 1 linear actuator
