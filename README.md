@@ -1,5 +1,5 @@
 # asm-planB_arduino
-=======
+
 # Summary
 This file acts as the backup program for RASMv2 main control program
 
