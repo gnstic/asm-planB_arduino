@@ -21,7 +21,7 @@ dualMC33926_motorDriver1::dualMC33926_motorDriver1()
   _M2PWM_D2 = 10;
   _M2_D1 = 8;
   _M2SF = 11;	// optional if wants to read status flag
-  _M2FB = A1;	// optional if wants to read current  
+  _M2FB = A1;	// optional if wants to read current
 }
 
 // Public Methods //////////////////////////////////////////////////////////////
@@ -59,13 +59,13 @@ void dualMC33926_motorDriver1::setM1Speed(int speed)
   if (speed > 400)  // Max PWM dutycycle
     speed = 400;
 
-  digitalWrite(_M1PWM_D2, speed); 
+  digitalWrite(_M1PWM_D2, speed);
 
   if (reverse){
 	digitalWrite(_M1IN1, LOW);
 	digitalWrite(_M1IN1, HIGH);
   }
-    
+
   else if(speed == 0){
 	  digitalWrite(_M1IN1, LOW);
 	  digitalWrite(_M1IN2, LOW);
@@ -144,5 +144,5 @@ void dualMC33926_motorDriver1::setBrakes(int brake1,int brake2) {
 	setM1Brake(brake1);
 	setM2Brake(brake2);
 } // end setting brake for both motors
-
+// ************** END OF SETTING MOTOR BRAKE ************** //
 // ************** END OF SETTING MOTOR BRAKE ************** //

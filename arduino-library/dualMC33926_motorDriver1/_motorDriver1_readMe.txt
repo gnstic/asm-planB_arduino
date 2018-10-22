@@ -23,11 +23,10 @@ pin high (either with an external connection or via the default-overriding jumpe
 ## Pin Conenction
   * IN1 : D2
   * IN2 : D3
-  * D1 : D9
-  * D2 : D12
+  * D1 : D7
+  * D2 : D9
   * SF : no connection
   * FB : no connection
   * EN : to Arduino 5V pin
-  * INV : to Arduino 5V pin. - logical HIGH value inverts the meaning of IN1 and IN2. This allows INV to function as a direction line if IN1 and IN2 are set to different values
   
 
