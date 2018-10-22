@@ -32,7 +32,7 @@ void dualMC33926_motorDriver1::init()
   pinMode(_M1IN1, OUTPUT);
   pinMode(_M1IN2, OUTPUT);
   pinMode(_M1PWM_D2, OUTPUT);
-  pinMode(__M1_D1, OUTPUT); digitalWrite(_M1_D1, LOW);
+  pinMode(_M1_D1, OUTPUT); digitalWrite(_M1_D1, LOW);
   pinMode(_M1SF, INPUT);
   pinMode(_M1FB, INPUT);
 
@@ -63,7 +63,7 @@ void dualMC33926_motorDriver1::setM1Speed(int speed)
 
   if (reverse){
 	digitalWrite(_M1IN1, LOW);
-	digitalWrite(_M1IN1, HIGH);
+	digitalWrite(_M1IN2, HIGH);
   }
 
   else if(speed == 0){
@@ -72,7 +72,7 @@ void dualMC33926_motorDriver1::setM1Speed(int speed)
   }
   else{
     digitalWrite(_M1IN1, HIGH);
-	digitalWrite(_M1IN1, LOW);
+	digitalWrite(_M1IN2, LOW);
   }
 } // end of setM1Speed
 
@@ -93,7 +93,7 @@ void dualMC33926_motorDriver1::setM2Speed(int speed)
 
 	if (reverse) {
 		digitalWrite(_M2IN1, LOW);
-		digitalWrite(_M2IN1, HIGH);
+		digitalWrite(_M2IN2, HIGH);
 	}
 
 	else if (speed == 0) {
@@ -102,7 +102,7 @@ void dualMC33926_motorDriver1::setM2Speed(int speed)
 	}
 	else {
 		digitalWrite(_M2IN1, HIGH);
-		digitalWrite(_M2IN1, LOW);
+		digitalWrite(_M2IN2, LOW);
 	}
 } // end of setM2Speed
 

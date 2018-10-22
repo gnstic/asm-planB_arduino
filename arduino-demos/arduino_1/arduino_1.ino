@@ -52,7 +52,6 @@ void loop(void){
 // create custom headings as necessary to clearly organize your sketch
 // e.g., Button functions, DC Motor functions, Servo functions, etc.
  void testMotor1(){ // for testing motor 1
-<<<<<<< HEAD:arduino-demos/arduino_1/arduino_1.ino
   md.setM1Speed(400); // max value 400;
   delay(1000);
   md.setM1Brake(400);

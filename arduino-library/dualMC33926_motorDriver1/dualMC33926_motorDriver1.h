@@ -21,7 +21,7 @@ class dualMC33926_motorDriver1
 		void setSpeeds(int speedM1, int speedM2); // Set speed for both M1 and M2.
 		void setM1Brake(int brake);
 		void setM2Brake(int brake);
-		void setBrakes(int brake1, int brake2)
+		void setBrakes(int brake1, int brake2);
 		//unsigned int getM1CurrentMilliamps(); // Get current reading for M1.
 		//unsigned int getM2CurrentMilliamps(); // Get current reading for M2.
 		//unsigned char getM1Fault(); // Get fault reading.
