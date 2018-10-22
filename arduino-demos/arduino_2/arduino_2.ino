@@ -16,11 +16,6 @@
  #include "DualMC33926Motor3Shield.h";
  DualMC33926Motor3Shield md;
 
- // *** define the motor pins ***
- // control pins
-
- // enable pins
-
  
 /***********************
  ** Global Variables ***
@@ -80,9 +75,10 @@ void loop(void){
   }
   Serial.println("program has ended");*/
 
-  testMotor1();
+  testMotor5();
   Serial.println("motor 1 is driving");
-  delay(2000);  //delay 2 seconds
+  delay(1000);  //delay 2 seconds
+  testMotor6();
 } // end loop() function
 
 /****************************
@@ -91,66 +87,68 @@ void loop(void){
 // create custom headings as necessary to clearly organize your sketch
 // e.g., Button functions, DC Motor functions, Servo functions, etc.
  void testMotor1(){ // for testing motor 1
-<<<<<<< HEAD:arduino-demos/arduino_1/arduino_1.ino
   md.setM1Speed(400); // max value 400;
-  delay(1000);
+  delay(2000);
   md.setM1Speed(0);
-  delay(100);
+  delay(1000);
   md.setM1Speed(-400); // max value 400;
-  delay(1000);
-=======
-  md.setM1Speed(255); // max value 400;
-  delay(500);
+  delay(2000);
   md.setM1Speed(0);
-  delay(100);
-  md.setM1Speed(-255); // max value 400;
-  delay(500);
->>>>>>> 0b788b28815d0795fe68a4306f71f5ddb90cd0b0:arduino-demos/arduino_1/arduino_1.ino
-  md.setM1Speed(0); // stop the motor
-  delay(100);
+  delay(1000);
  } // end of testing motor 1
 
   void testMotor2(){ //for testing motor 2
   md.setM2Speed(255); // max value 400;
-  delay(500);
+  delay(2000);
   md.setM2Speed(0); // stop the motor
-  delay(100);
+  delay(1000);
   md.setM2Speed(-255); // max value 400;
-  delay(500);
+  delay(2000);
   md.setM2Speed(0); // stop the motor
-  delay(100);
+  delay(1000);
  } // end of testing motor 2
 
   void testMotor3(){ //for testing motor 3
-  md.setM3Speed(255); // max value 400;
-  delay(500);
+  md.setM3Speed(400); // max value 400;
+  delay(2000);
   md.setM3Speed(0);
-  delay(100);
-  md.setM3Speed(-255); // max value 400;
-  delay(500);
+  delay(1000);
+  md.setM3Speed(-400); // max value 400;
+  delay(2000);
   md.setM3Speed(0);
-  delay(100);
+  delay(1000);
  } // end of testing motor 3
 
    void testMotor4(){ //for testing motor 4
-  md.setM4Speed(255); // max value 400;
-  delay(500);
+  md.setM4Speed(400); // max value 400;
+  delay(2000);
   md.setM4Speed(0); // stop the motor
-  delay(100);
-  md.setM4Speed(-255); // max value 400;
-  delay(500);
+  delay(1000);
+  md.setM4Speed(-400); // max value 400;
+  delay(2000);
   md.setM4Speed(0); // stop the motor
-  delay(100);
+  delay(1000);
  } // end of testing motor 2
 
   void testMotor5(){ //for testing motor 5
-  md.setM5Speed(255); // max value 400;
-  delay(500);
+  md.setM5Speed(400); // max value 400;
+  delay(2000);
   md.setM5Speed(0); // stop the motor
-  delay(100);
-  md.setM5Speed(-255); // max value 400;
-  delay(500);
+  delay(1000);
+  md.setM5Speed(-400); // max value 400;
+  delay(2000);
   md.setM5Speed(0); // stop the motor
-  delay(100);
+  delay(1000);
+ } // end of testing motor 3
+
+   void testMotor6(){ //for testing motor 5
+  md.setM6Speed(400); // max value 400;
+  delay(2000);
+  md.setM6Speed(0); // stop the motor
+  delay(1000);
+  md.setM6Speed(-400); // max value 400;
+  delay(2000);
+  md.setM6Speed(0); // stop the motor
+  delay(1000);
  } // end of testing motor 3
 
