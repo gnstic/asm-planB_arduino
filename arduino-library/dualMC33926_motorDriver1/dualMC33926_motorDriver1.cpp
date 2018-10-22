@@ -1,5 +1,5 @@
+// the cpp file for dual MC33926 motor driver that only two motors, motor 1 and motor 2
 // include DualMC33926 header file
-
 #include "dualMC33926_motorDriver1.h"
 
 
